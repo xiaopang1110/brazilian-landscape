@@ -27,7 +27,6 @@ RUN set -ex; \
 
 # Copy in custom code from the host machine.
 WORKDIR /var/www/html
-RUN mkdir /tmp
 RUN chmod -R 777 /tmp
 RUN chmod -R 777 /var/www/html
 COPY . ./
