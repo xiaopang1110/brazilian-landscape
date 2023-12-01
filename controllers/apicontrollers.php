@@ -193,7 +193,7 @@ class Apicontrollers
     {
         $db = getDB();
         $stmt = $db->prepare("SELECT * FROM ".TBL_STORY." WHERE `is_active`=1 ORDER BY RAND() LIMIT 1");
-        $stmt->bindParam('id', $id, PDO::PARAM_STR);
+        // $stmt->bindParam('id', $id, PDO::PARAM_STR);
         $stmt->execute();
         $count = $stmt->rowCount();
         if ($count) {
